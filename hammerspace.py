@@ -222,13 +222,13 @@ class HammerspaceIntegration:
             if "hs_location" not in entity.get("keys", []):
                 continue
 
-            func = {
-                "task": self._handle_task_change,
-                "assetversion": self._handle_assetversion_change,
-            }.get(entity.get("entityType"))
-
+            entity_type = entity.get("entity_type")
+            func_name = f"_handle_{entity_type.lower()}_change"
+            func = getattr(self, func_name, None)
             if func is not None:
                 func(entity)
+            else:
+                self._logger.warning("No handler for entity type %s", entity_type)
 
         # If you want a trigger to return a notification you can do so by returning
         # a structure from the trigger itself.
