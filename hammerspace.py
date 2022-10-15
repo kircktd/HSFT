@@ -35,8 +35,12 @@ def main():
     dotenv.load_dotenv()
 
     app = HammerspaceIntegration()
+
     app.create_hs_attribute_on_entity("task", "Task")
     app.create_hs_attribute_on_entity("assetversion")
+    # Note: If you add another attribute on another entity type, you'll need to
+    # add a handler method for that entity type as well.
+
     app.register_trigger()
     app.listen()
 
