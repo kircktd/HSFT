@@ -1,0 +1,12 @@
+# Ignore user environment files
+.env
+.envrc
+
+# Ignore Python virtual environments
+.venv
+
+# Ignore .DS_Store files
+.DS_Store
+
+# Ignore Python files
+*.py[cod]
