@@ -292,14 +292,22 @@ class HammerspaceIntegration:
         if entity is None:
             return
 
+        value = event_entity["changes"]["hs_location"]
+
+        processed = False
         components = entity["components"]
         availabilities = self._location.get_component_availabilities(components)
-        paths = self._location.get_filesystem_paths(
-            [info[0] for info in zip(components, availabilities) if info[1] == 100.0]
-        )
-        for path in paths:
-            value = event_entity["changes"]["hs_location"]
+        for index, component in enumerate(components):
+            availability = availabilities[index]
+            if availability == 0.0:
+                continue
+
+            path = self._location.get_filesystem_path(component)
             self._mark_in_hammerspace(path, value["old"], value["new"])
+            processed = True
+
+        if not processed:
+            self._logger.debug("No components found on central storage location")
 
     def _mark_in_hammerspace(self, path: str, old_value: str, new_value: str):
         """
