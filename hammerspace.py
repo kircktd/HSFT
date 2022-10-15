@@ -229,6 +229,7 @@ class HammerspaceIntegration:
                 func(entity)
             else:
                 self._logger.warning("No handler for entity type %s", entity_type)
+                # TODO: Revert the attribute change because we've not taken action on it.
 
         # If you want a trigger to return a notification you can do so by returning
         # a structure from the trigger itself.
@@ -300,6 +301,7 @@ class HammerspaceIntegration:
         for index, component in enumerate(components):
             availability = availabilities[index]
             if availability == 0.0:
+                # TODO: Revert the attribute change because we've not taken action on it.
                 continue
 
             path = self._location.get_filesystem_path(component)
