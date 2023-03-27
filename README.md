@@ -43,6 +43,5 @@ will require some configuration.
 ### Configuration
 
 1. Edit the hammertrack.py script to set the location sites using a key word value and menu name to match the settings in Ftrack for the site locations (line 90).
-2. Copy or link shothammer_config.yml to shotgunEvents working directory 
-3. One or more Hammerspace clusters set up with keyword-based objectives to drive data placement 
-(e.g. `IF HAS_KEYWORD("SGHS_LOCATION") THEN {SLO('place-on-local-volumes)}`)
+2. One or more Hammerspace clusters set up with keyword-based objectives to drive data placement 
+(e.g. `IF HAS_KEYWORD("LOCATION") THEN {SLO('place-on-local-volumes)}`)
