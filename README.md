@@ -26,5 +26,16 @@ and the label names are passed through directly as Hammerspace labels.
 <!-- GETTING STARTED -->
 ## Getting Started
 
-Here are some basics on getting up and running. Everyone's Shotgrid instance is configured a bit differently and
-will require some configuration depending on paths and pipeline configuration names and such.
+Here are some basics on getting up and running. Everyone's Ftrack instance is configured a bit differently and
+will require some configuration.
+### Prerequisites
+
+1. [Ftrack API](https://help.ftrack.com/en/articles/1054630-getting-started-with-the-api) installed and configured `$ pip install ftrack-python-api`
+2. [Hammerspace Toolkit](https://github.com/hammer-space/hstk) (hstk) installed: `$ pip install hstk`
+3. Hammerspace file system mounted
+
+### Installation
+
+1. Clone this repository `git clone https://github.com/kircktd/hsft.git`
+2. Copy or link hammertrack.py to the working directory on your server
+3. Install requirements `pip install -r requirements.txt`
