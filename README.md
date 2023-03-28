@@ -38,7 +38,6 @@ will require some configuration.
 
 1. Clone this repository `git clone https://github.com/kircktd/hsft.git`
 2. Copy or link hammertrack.py to the working directory on your server
-3. Install requirements `pip install -r requirements.txt`
 
 ### Configuration
 
