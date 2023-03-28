@@ -45,10 +45,9 @@ will require some configuration.
 1. Go to the setting page with in Ftrack and selctect "Custom Attributes"
 ![image](https://user-images.githubusercontent.com/105011940/228266626-44af6aa0-57cc-4606-903e-b1c728917ff7.png)
 2. Create a new Custom Attribute where you define the locations of your Hammerspace clusters. You must enter a "menu' name that is normally the location, and then for each menu name you have to add a value which in this example the value is the 3 letter acronym for the local airport associated with the city name.
-![image](https://user-images.githubusercontent.com/105011940/228268124-ba9ffa4b-eb43-4d4d-af02-61e35012d0ea.png)
 
-![image](https://user-images.githubusercontent.com/105011940/228267317-83321d0b-7a78-4774-8ffa-d74406ca3fd3.png)
+     ![image](https://user-images.githubusercontent.com/105011940/228268855-b55805f4-76a1-4fa4-ab65-2c7204b22ed1.png)
 
-2. Edit the hammertrack.py script to set the location sites using a key word value and menu name to match the settings in Ftrack for the site locations (line 90).
-3. One or more Hammerspace clusters set up with keyword-based objectives to drive data placement 
+3. Edit the hammertrack.py script to set the location sites using a key word value and menu name to match the settings in Ftrack for the site locations (line 90).
+4. One or more Hammerspace clusters set up with keyword-based objectives to drive data placement 
 (e.g. `IF HAS_KEYWORD("LOCATION") THEN {SLO('place-on-local-volumes)}`)
