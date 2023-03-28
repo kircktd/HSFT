@@ -69,8 +69,12 @@ will require some configuration.
  
  8. Launch the hammpertrack.py script in the backround on your Windows or Linux server. The listener will monitor for location changes in Ftrack project and will update the metatdata for the files on the Hammerspace fileshare with the appropiate labels. Once these labels are detected by the Hammerspace sweeper as valid objectives the files associated with the labels will be placed-on the Hammerspace cluster that is associated with the specified location.
 
-Usage
-Once the Hammertrack script has been configured and running in the backround, it will recognize location change events accordingly.
+<!-- USAGE EXAMPLES -->
+## Usage
+
+Once the Ftrack instance and the hammertrack.py script have been configured it will recognize location change events on Tasks and act accordingly. Launch the hammertrack.py script on your windows or linux server where the hammerspace Fileshare is mounted. With in the project view select a task and update the location field. Once that is done the script will pick-up on the event and will update the directory for the specified project with the unique location metadata.
+   ![image](https://user-images.githubusercontent.com/105011940/228309945-68bab50b-56f5-4a84-8804-27e94fda6838.png)
+
 
  
 
