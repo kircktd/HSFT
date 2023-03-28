@@ -48,8 +48,22 @@ will require some configuration.
 
      ![image](https://user-images.githubusercontent.com/105011940/228268855-b55805f4-76a1-4fa4-ab65-2c7204b22ed1.png)
 3. Next you need to add the custom attribute to your Ftrack project. Select Attributes, Custom Attributes, Task.
-![image](https://user-images.githubusercontent.com/105011940/228272670-e2990482-3c8f-4a7c-9bea-c05d0e99a890.png)
 
-5. Edit the hammertrack.py script to set the location sites using a key word value and menu name to match the settings in Ftrack for the site locations (line 90).
-6. One or more Hammerspace clusters set up with keyword-based objectives to drive data placement 
-(e.g. `IF HAS_KEYWORD("LOCATION") THEN {SLO('place-on-local-volumes)}`)
+     ![image](https://user-images.githubusercontent.com/105011940/228275544-05e83a65-ae41-40cf-afdd-209d5d010b22.png)
+
+
+4. Edit the hammertrack.py script to set the location sites using a key word value and menu name to match the settings in Ftrack for the site locations (line 90). 
+
+     ![image](https://user-images.githubusercontent.com/105011940/228274133-c9e93751-0dd6-4502-8f12-9da2c02396bc.png)
+
+5. One or more Hammerspace clusters set up with label-based objectives to drive data placement 
+(e.g. `IF HAS_LABEL("LOCATION") THEN {SLO('place-on-local-volumes)}`)
+6. Add the value labels to each Hammerspace cluster by logging into each Hammerspace primary anvil and adding the associated labels. Once completed do a "label-list" to verify all the required labels are defined. Repeat this step on all primary Anvil servers.
+
+ ![image](https://user-images.githubusercontent.com/105011940/228278000-2d4e1a69-489c-4bd9-81d3-bc18468f5fb5.png)
+ ![image](https://user-images.githubusercontent.com/105011940/228278742-e725880c-5d61-4566-b789-dbb018a786e3.png)
+ 
+ 7. Launch the hammpertrack.py script in the backround on your Windows or Linux server. The listener will monitor for location changes in Ftrack project and will update the metatdata for the files on the Hammerspace fileshare with the appropiate labels. Once these labels are detected by the Hammerspace sweeper as valid objectives the files associated with the labels will be placed-on the Hammerspace cluster that is associated with the specified location.
+
+ 
+
