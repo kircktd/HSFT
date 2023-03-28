@@ -72,7 +72,7 @@ will require some configuration.
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Once the Ftrack instance and the hammertrack.py script have been configured it will recognize location change events on Tasks and act accordingly. Launch the hammertrack.py script on your windows or linux server where the hammerspace Fileshare is mounted. With in the project view select a task and update the location field. Once that is done the script will pick-up on the event and will update the directory for the specified project with the unique location metadata.
+Once the Ftrack instance and the hammertrack.py script have been configured it will recognize location change events on Tasks and act accordingly. Launch the hammertrack.py script on your windows or linux server where the Hammerspace Fileshare is mounted. With in the project view select a task and update the location field (make sure you hit the save button after the update). Once that is done the script will pick-up on the event and will update the directory for the specified project with the unique location metadata.
    ![image](https://user-images.githubusercontent.com/105011940/228309945-68bab50b-56f5-4a84-8804-27e94fda6838.png)
 
 
