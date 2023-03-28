@@ -42,28 +42,35 @@ will require some configuration.
 
 ### Configuration
 
-1. Go to the setting page with in Ftrack and selctect "Custom Attributes"
+1. You first need to setup your storage location and storage senerio and define the centralized storage senerio using your Hammerspace fileshare.
+    ![image](https://user-images.githubusercontent.com/105011940/228307502-308db076-748e-4b02-8ab9-c97eef800fd4.png)
+    ![image](https://user-images.githubusercontent.com/105011940/228307807-56aa2865-f2e4-4a4b-8eef-7d9c7b6f20b3.png)
+
+3. Go to the setting page with in Ftrack and selctect "Custom Attributes"
 ![image](https://user-images.githubusercontent.com/105011940/228266626-44af6aa0-57cc-4606-903e-b1c728917ff7.png)
-2. Create a new Custom Attribute where you define the locations of your Hammerspace clusters. You must enter a "menu' name that is normally the location, and then for each menu name you have to add a value which in this example the value is the 3 letter acronym for the local airport associated with the city name.
+3. Create a new Custom Attribute where you define the locations of your Hammerspace clusters. You must enter a "menu' name that is normally the location, and then for each menu name you have to add a value which in this example the value is the 3 letter acronym for the local airport associated with the city name.
 
      ![image](https://user-images.githubusercontent.com/105011940/228268855-b55805f4-76a1-4fa4-ab65-2c7204b22ed1.png)
-3. Next you need to add the custom attribute to your Ftrack project. Select Attributes, Custom Attributes, Task.
+4. Next you need to add the custom attribute to your Ftrack project. Select Attributes, Custom Attributes, Task.
 
      ![image](https://user-images.githubusercontent.com/105011940/228275544-05e83a65-ae41-40cf-afdd-209d5d010b22.png)
 
 
-4. Edit the hammertrack.py script to set the location sites using a key word value and menu name to match the settings in Ftrack for the site locations (line 90). 
+5. Edit the hammertrack.py script to set the location sites using a key word value and menu name to match the settings in Ftrack for the site locations (line 90). 
 
      ![image](https://user-images.githubusercontent.com/105011940/228274133-c9e93751-0dd6-4502-8f12-9da2c02396bc.png)
 
-5. One or more Hammerspace clusters set up with label-based objectives to drive data placement 
+6. One or more Hammerspace clusters set up with label-based objectives to drive data placement 
 (e.g. `IF HAS_LABEL("LOCATION") THEN {SLO('place-on-local-volumes)}`)
-6. Add the value labels to each Hammerspace cluster by logging into each Hammerspace primary anvil and adding the associated labels. Once completed do a "label-list" to verify all the required labels are defined. Repeat this step on all primary Anvil servers.
+7. Add the value labels to each Hammerspace cluster by logging into each Hammerspace primary anvil and adding the associated labels. Once completed do a "label-list" to verify all the required labels are defined. Repeat this step on all primary Anvil servers.
 
       ![image](https://user-images.githubusercontent.com/105011940/228278000-2d4e1a69-489c-4bd9-81d3-bc18468f5fb5.png)
       ![image](https://user-images.githubusercontent.com/105011940/228278742-e725880c-5d61-4566-b789-dbb018a786e3.png)
  
- 7. Launch the hammpertrack.py script in the backround on your Windows or Linux server. The listener will monitor for location changes in Ftrack project and will update the metatdata for the files on the Hammerspace fileshare with the appropiate labels. Once these labels are detected by the Hammerspace sweeper as valid objectives the files associated with the labels will be placed-on the Hammerspace cluster that is associated with the specified location.
+ 8. Launch the hammpertrack.py script in the backround on your Windows or Linux server. The listener will monitor for location changes in Ftrack project and will update the metatdata for the files on the Hammerspace fileshare with the appropiate labels. Once these labels are detected by the Hammerspace sweeper as valid objectives the files associated with the labels will be placed-on the Hammerspace cluster that is associated with the specified location.
+
+Usage
+Once the Hammertrack script has been configured and running in the backround, it will recognize location change events accordingly.
 
  
 
