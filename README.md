@@ -60,8 +60,8 @@ will require some configuration.
 (e.g. `IF HAS_LABEL("LOCATION") THEN {SLO('place-on-local-volumes)}`)
 6. Add the value labels to each Hammerspace cluster by logging into each Hammerspace primary anvil and adding the associated labels. Once completed do a "label-list" to verify all the required labels are defined. Repeat this step on all primary Anvil servers.
 
- ![image](https://user-images.githubusercontent.com/105011940/228278000-2d4e1a69-489c-4bd9-81d3-bc18468f5fb5.png)
- ![image](https://user-images.githubusercontent.com/105011940/228278742-e725880c-5d61-4566-b789-dbb018a786e3.png)
+      ![image](https://user-images.githubusercontent.com/105011940/228278000-2d4e1a69-489c-4bd9-81d3-bc18468f5fb5.png)
+      ![image](https://user-images.githubusercontent.com/105011940/228278742-e725880c-5d61-4566-b789-dbb018a786e3.png)
  
  7. Launch the hammpertrack.py script in the backround on your Windows or Linux server. The listener will monitor for location changes in Ftrack project and will update the metatdata for the files on the Hammerspace fileshare with the appropiate labels. Once these labels are detected by the Hammerspace sweeper as valid objectives the files associated with the labels will be placed-on the Hammerspace cluster that is associated with the specified location.
 
