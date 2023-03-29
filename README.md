@@ -66,8 +66,13 @@ will require some configuration.
 
       ![image](https://user-images.githubusercontent.com/105011940/228278000-2d4e1a69-489c-4bd9-81d3-bc18468f5fb5.png)
       ![image](https://user-images.githubusercontent.com/105011940/228278742-e725880c-5d61-4566-b789-dbb018a786e3.png)
+      
+ 8. Install dotenv and configure a .env file in the same working directory where the hammertrack.py script is installed. Below is an example of a .env file configured for use with Hammertrack.
+
+![image](https://user-images.githubusercontent.com/105011940/228540725-b7ef91cd-a46a-409e-a468-2eb18fef1543.png)
+
  
- 8. Launch the hammpertrack.py script in the backround on your Windows or Linux server. The listener will monitor for location changes in Ftrack project and will update the metatdata for the files on the Hammerspace fileshare with the appropiate labels. Once these labels are detected by the Hammerspace sweeper as valid objectives the files associated with the labels will be placed-on the Hammerspace cluster that is associated with the specified location.
+ 9. Launch the hammpertrack.py script in the backround on your Windows or Linux server. The listener will monitor for location changes in Ftrack project and will update the metatdata for the files on the Hammerspace fileshare with the appropiate labels. Once these labels are detected by the Hammerspace sweeper as valid objectives the files associated with the labels will be placed-on the Hammerspace cluster that is associated with the specified location.
 
 <!-- USAGE EXAMPLES -->
 ## Usage
