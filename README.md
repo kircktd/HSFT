@@ -32,7 +32,8 @@ will require some configuration.
 
 1. [Ftrack API](https://help.ftrack.com/en/articles/1054630-getting-started-with-the-api) installed and configured `$ pip install ftrack-python-api`
 2. [Hammerspace Toolkit](https://github.com/hammer-space/hstk) (hstk) installed: `$ pip install hstk`
-3. Hammerspace file system mounted
+3. Dotenv Installed - https://pypi.org/project/python-dotenv/
+4. Hammerspace file system mounted
 
 ### Installation
 
