@@ -89,9 +89,9 @@ Once the Ftrack instance and the hammertrack.py script have been configured it w
 
 This project wouldn't exist without these folks' contributions:
 
-* [Patrick Boucher]of [Backlight Creative](https://www.backlight.co/) 
+* Patrick Boucher of [Backlight Creative](https://www.backlight.co/) 
 for creating the baseline python code that integrates with Ftrack.
-* [kyla Lebon]of [(https://ftrack.com/)Ftrack]
+* Kyla Lebon of [Ftrack](https://ftrack.com/)
 for technical support and Ftrack access.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
