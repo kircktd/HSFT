@@ -93,6 +93,8 @@ This project wouldn't exist without these folks' contributions:
 for creating the baseline python code that integrates with Ftrack.
 * Kyla Lebon of [Ftrack](https://ftrack.com/)
 for technical support and Ftrack access.
+* Tram Le-Jones of [Ftrack](https://ftrack.com/)
+for technical support and Ftrack access.
 * Mike Bott of [Hammerspace](https://hammerspace.com)
 for Python support.
 
