@@ -89,7 +89,7 @@ Once the Ftrack instance and the hammertrack.py script have been configured it w
 
 This project wouldn't exist without these folks' contributions:
 
-* Patrick Boucher of [LAIKA Studios](https://www.laika.com/)) 
+* Patrick Boucher of [LAIKA Studios](https://www.laika.com/) 
 for creating the baseline python code that integrates with Ftrack.
 * Kyla Lebon of [Ftrack](https://ftrack.com/)
 for technical support and Ftrack access.
